@@ -83,6 +83,12 @@
 > ⚠️ 编译时 `-DCBT` **必须写在 `tgstation.dme` 前面**，顺序写反会被编译器静默忽略，
 > 表现为编译"0 errors"但游戏里所有电脑图标变成红色 ERROR 方块。`build_server.bat` 已经写对。
 
+> ⚠️ **包根目录只有上面这 3 个 `.bat` 是给你用的**（外加本文档与 `开服指南.md`）。
+> `bin/` 与 `tools/` 是上游的开发者工具链，需要系统安装 BYOND + 联网下载 Bun，玩家不用管。
+> 上游原本放在根目录的 `BUILD.bat` / `RUN_SERVER.bat` / `CLEAN.bat` 等入口**已移除** ——
+> 它们走 juke + TypeScript 全链、按「系统装过 BYOND」找编译器，在本包里必然报
+> `ENOENT … 'dm.exe'`，且与 `start_server.bat` 极易混淆；上游构建链本体仍完整保留。
+
 ---
 
 ## 六、版本与校验
