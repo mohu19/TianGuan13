@@ -265,6 +265,11 @@
 #include "mouse_bite_cable.dm"
 #include "move_pulled.dm"
 #include "movement_order_sanity.dm"
+// TIANGUAN EDIT ADDITION START - MULTITILE_VEHICLES
+// Kept under ~tianguan/ because TEST_ASSERT & friends are #undef'd at the bottom of
+// this file, so a test included from modular_tianguan/ would lose the macros.
+#include "~tianguan\multitile_vehicles.dm"
+// TIANGUAN EDIT ADDITION END
 #include "mutant_hands_consistency.dm"
 #include "mutant_organs.dm"
 #include "neurine_trauma_cleanup.dm"
